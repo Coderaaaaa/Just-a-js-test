@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Check</title>
+</head>
+<body>
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput">
+    <button onclick="checkName()">Check Name</button>
+    <p id="result"></p>
+
+    <script>
+        function checkName() {
+            const nameInput = document.getElementById('nameInput').value.trim();
+            const resultElement = document.getElementById('result');
+
+            if (nameInput !== '') {
+                resultElement.textContent = `Hello, ${nameInput}! I know where you live. Your not safe. Run. Run. Run.`;
+            } else {
+                resultElement.textContent = 'Please enter your name.';
+            }
+        }
+    </script>
+</body>
+</html>
